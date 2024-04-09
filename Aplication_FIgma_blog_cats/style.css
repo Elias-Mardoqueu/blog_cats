@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+body{
+    width: 100%;
+    display: grid;
+    align-items: start;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+/*estilizando o caberçalho*/
+header{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+    padding: 0.5% 0%;
+    background-color: #065E7C;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+header > input{
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 10px 10px;
+    color: white;
+    padding: 0.5%;
+    font-size: 1rem;
+    width: 80%;
+}
+
+
+/*estilizando main*/
+main{
+    width: 90%;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
+}
+main > img{
+    width: 100%;
+}
+main > #text_aprove{
+    margin: 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main > #text_aprove > h1{
+    font-weight: bolder;
+}
+main > section > p{
+    margin: 40px 0px;
+}
+
+
+/*estilizando o aside*/
+aside{
+    margin-left: 100px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row: 2;
+}
+aside > h2{
+    font-weight: bolder;
+}
+aside > .felin_article{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+}
+.felin_article > img{
+    width: 180px;
+    height: 100px;
+}
+.felin_article > article{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.felin_article > article > h3{
+    font-weight: bolder;
+}
+
+
+/*estilizando o footer*/
+footer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 0.5% 0%;
+    background-color: #065E7C;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    align-self: end; 
+}
+
+
+/*adicionando responsividade*/
+@media screen and (max-width: 800px){
+    body{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    header{
+        width: 100%;
+    }
+    main{
+        width: 90%;
+        margin: 0% 0%;
+    }
+    aside{
+        width: 90%;
+        margin: 0% 0%;
+    }
+    aside > .felin_article > img{
+        width: 100px;
+        height: 50px;
+    }
+    footer{
+        width: 100%;
+    }
+}
